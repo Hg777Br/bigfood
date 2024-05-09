@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="265.902 171.361 149.295 135.968" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Poetsen+One');</style>
+    <filter id="drop-shadow-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%" bx:preset="drop-shadow 1 7 10 1 0.55 rgba(0,0,0,0.3)">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+      <feOffset dx="7" dy="10"/>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="spread-ctrl" type="linear" slope="1.1"/>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.3)"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="outline-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%" bx:preset="outline 1 0 #450909">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="0"/>
+      <feFlood flood-color="#450909" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="inner-shadow-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%" bx:preset="inner-shadow 1 0 0 3 0.5 rgba(0,0,0,0.7)">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur stdDeviation="3"/>
+      <feComposite operator="out" in="SourceGraphic"/>
+      <feComponentTransfer result="choke">
+        <feFuncA type="linear" slope="1"/>
+      </feComponentTransfer>
+      <feFlood flood-color="rgba(0,0,0,0.7)" result="color"/>
+      <feComposite operator="in" in="color" in2="choke" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="transform-origin: 341.479px 238.627px;">
+    <title>burguer</title>
+    <path style="stroke: rgb(0, 0, 0); fill: rgb(237, 168, 60);" d="M 278.614 270.551 H 404.71 A 6.264 6.264 0 0 1 410.974 276.815 V 287.407 A 11.901 11.901 0 0 1 399.073 299.308 H 281.356 A 11.901 11.901 0 0 1 269.455 287.407 V 279.71 A 9.159 9.159 0 0 1 278.614 270.551 Z" bx:shape="rect 269.455 270.551 141.519 28.757 9.159 6.264 11.901 11.901 1@604444b5"/>
+    <rect x="270.027" y="253.869" width="142.297" height="16.088" style="stroke: rgb(0, 0, 0); fill: rgb(147, 59, 51);" rx="5.342" ry="5.342"/>
+    <path style="stroke: rgb(0, 0, 0); fill: rgb(255, 218, 35);" d="M 297.598 254.447 L 348.652 285.513 C 348.652 285.513 367.15 267.378 367.512 267.378 C 367.875 267.378 395.766 254.124 395.766 254.124 L 297.598 254.447 Z"/>
+    <rect x="276.454" y="239.219" width="130.876" height="14.519" style="stroke: rgb(0, 0, 0); fill: rgb(102, 58, 34);" rx="5.42" ry="5.42"/>
+    <path style="stroke: rgb(0, 0, 0); fill: rgb(137, 188, 74);" d="M 280.207 235.449 C 277.045 247.678 292.097 250.197 295.26 237.968 C 299.177 251.952 313.961 243.157 312.507 237.968 C 313.809 250.378 329.901 245.347 329.126 237.968 C 330.658 252.093 346.817 242.076 346.373 237.968 C 345.856 244.886 364.005 249.042 364.874 237.408 C 363.819 249.323 382.008 249.323 383.062 237.408 C 385.049 248.047 403.076 243.829 401.563 235.728 L 280.207 235.449 Z"/>
+    <path d="M 295.559 197.91 L 391.163 197.91 C 397.293 197.931 402.945 200.168 406.959 203.748 C 410.972 207.33 413.478 212.374 413.502 217.845 L 413.502 234.31 C 413.478 235.233 413.037 236.162 412.363 236.763 C 411.688 237.365 410.648 237.758 409.613 237.779 L 283.398 237.779 C 280.627 237.758 278.013 236.736 276.2 235.12 C 274.389 233.502 273.243 231.171 273.22 228.696 L 273.22 217.845 C 273.243 212.374 275.75 207.33 279.764 203.748 C 283.777 200.168 289.429 197.931 295.559 197.91 Z M 280.518 204.423 C 276.639 207.884 274.264 212.569 274.287 217.845 L 274.287 228.696 C 274.264 230.976 275.278 232.949 276.956 234.445 C 278.634 235.943 280.845 236.849 283.398 236.826 L 409.613 236.826 C 410.43 236.849 411.068 236.572 411.608 236.09 C 412.148 235.608 412.457 235.039 412.434 234.31 L 412.434 217.845 C 412.457 212.569 410.082 207.884 406.205 204.423 C 402.326 200.961 397.075 198.841 391.163 198.862 L 295.559 198.862 C 289.646 198.841 284.396 200.961 280.518 204.423 Z" style="fill: none;"/>
+    <path d="M 275.698 229.043 C 284.137 147.346 421.364 175.971 408.535 229.043 C 408.535 232.906 405.027 236.037 400.699 236.037 L 283.534 236.037 C 279.206 236.037 275.698 232.906 275.698 229.043 Z" style="stroke: rgb(0, 0, 0); fill: rgb(237, 168, 60);"/>
+    <animateTransform type="translate" additive="sum" attributeName="transform" values="0 -250;0 0" begin="0.49s" dur="0.32s" fill="freeze" keyTimes="0; 1" calcMode="spline" keySplines="0 0 0.69 0.21"/>
+    <animate attributeName="opacity" values="0;1" dur="0.56s" fill="freeze" keyTimes="0; 1" calcMode="discrete"/>
+    <animateTransform type="scale" additive="sum" attributeName="transform" values="1 1.76;1 1" begin="0.56s" dur="0.22s" fill="freeze" keyTimes="0; 1"/>
+  </g>
+  <text style="fill: rgb(255, 255, 255); font-family: 'Poetsen One'; font-size: 112px; letter-spacing: -7.7px; white-space: pre; filter: url('#drop-shadow-filter-0') url('#outline-filter-0') url('#inner-shadow-filter-0'); transform-origin: 334.275px 245.291px;" transform="matrix(1.10534799099, 0, 0, 1.071120023727, -1.692576401208, -5.901714099317)" x="277.422" y="290.196">BF<animateTransform type="scale" additive="sum" attributeName="transform" values="5 5;1 1" begin="0.96s" dur="0.82s" fill="freeze" keyTimes="0; 1" calcMode="spline" keySplines="1 0.49 1 1"/><animate attributeName="opacity" values="0;1" begin="0.96s" dur="0.81s" fill="freeze" keyTimes="0; 1" calcMode="spline" keySplines="1 0 1 1"/><animate attributeName="opacity" values="0;1" dur="0.96s" fill="freeze" begin="0s" keyTimes="0; 1" calcMode="discrete"/></text>
+</svg>

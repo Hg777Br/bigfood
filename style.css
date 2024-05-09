@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Black+Ops+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    margin: 0;
+
+    background-color: #333;
+    transition: background-color 0.5s ease-in-out;
+
+    overflow: hidden;
+}
+
+body#welcome {
+    background-color: #be2121;
+}
+
+body#about {
+    background-color: rgb(243, 120, 5);
+}
+
+body#location-time {
+    background-color: rgb(240, 167, 10);
+}
+
+body#celebrities {
+    background-color: rgb(135, 143, 21);
+}
+
+
+#topbar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    box-shadow: black 0 0 10px, black 0 0 50px;  
+}
+
+#topbar.short {
+    width: 200px;
+    height: 65px;
+}
+
+#topbar.active {
+    width: 100%;
+    height: 100%;
+}
+
+#topbar object {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -10px 0 0 0;
+    width: 200px;
+    height: 75px;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Poetsen One', monospace;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.25s ease-out;
+}
+
+#topbar.active object {
+    transform: scale(2);
+}
+
+#topbar:not(.active) object:hover {
+    transform: scale(1.1) translateY(5px);
+}
+
+#scrollbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 0;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% - 23px);
+    z-index: 1;
+    width: 17px;
+    border-radius: 10px;
+}
+
+#scrollbar.active {
+    display: flex;
+
+    animation: scrollload 0.5s ease-in-out;
+}
+
+#scrollbar div {
+    width: 13px;
+    height: 100px;
+    flex-grow: 1;
+    background-color: #4d4d4daa;
+    border-radius: 10px;
+}
+
+#scrollbar div span {
+    display: block;
+    width: 100%;
+    height: 0px;
+    border-radius: 10px;
+    background: white;
+
+    transition: height 0.125s ease-in-out;
+}
+
+#content {
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    transition: --myColor1 3s, --myColor2 3s;
+}
+
+.panel {
+    display: none;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 105vh;
+}
+
+.panel.active {
+    display: flex;
+}
+
+#welcome-panel {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-panel h1 {
+    margin: 10 0 20px 0;
+    font-size: 40px;
+    color: white;
+    font-family: 'Poetsen One', monospace;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: #fff 2px solid;
+}
+
+#welcome-panel.active h1 {
+    animation: fall 0.5s ease-in-out;
+}
+
+#welcome-panel video {
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #000000bb;
+    box-shadow: black 0 0 10px, black 0 0 50px;
+    align-self: center;
+    transition: transform 0.25s ease-out;
+}
+
+#welcome-panel.active video {
+    animation: appears 0.5s ease-in-out;
+}
+
+#about-panel {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    color : rgba(255, 255, 255, 1);
+    /*background: linear-gradient(to bottom, rgb(179, 0, 0), rgb(146, 0, 0));*/
+    border-radius: 10px;
+}
+
+#about-panel.active {
+    --myColor1: rgb(179, 0, 0);
+    --myColor2: rgb(146, 0, 0);
+}
+
+#about-panel div {
+    margin-bottom: 20px;
+}
+
+#about-panel div h1 {
+    margin: 0 0 0 30px;
+    font-size: 50px;
+}
+
+#about-panel div .underline {
+    width: 0px;
+    height: 3px;
+    background-color: white;
+    margin-left: 10px;
+}
+
+#about-panel.active .underline {
+    animation: underline 0.5s ease-in-out;
+    width: 450px;
+}
+
+#about-panel img {
+    margin: 0 40px 120px 50px;
+    height: auto;
+    width: 45%;
+    box-shadow:  black 0 0 50px;
+    border-radius: 15px;
+
+}
+
+#about-panel.active img {
+    animation: fromright 0.5s ease-in-out;
+}
+
+#about-panel p {
+    margin: 0 0 0 30px;
+    font-size: 25px;
+
+    padding: 10px;
+}
+
+#about-panel.active p {
+    animation: fromleft 0.5s ease-in-out;
+}
+
+#location-time-panel {
+    flex-direction: column;
+    align-self: center;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-shadow: rgb(104, 104, 104) 0 0 20px;
+    font-size: 35px;
+}
+
+
+#location-time-panel h1 {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    width: max-content;
+    padding: 0 10px;
+    color: rgb(240, 167, 10);
+    background: white;
+    text-shadow: none;
+    transition: transform 0.25s ease-out;
+    
+    font-size: 50px;
+}
+
+#location-time-panel.active h1 {
+    animation: scalein 0.75s ease-in;
+}
+
+#panels {
+    display: flex;
+    margin: 0 100px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#time {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.815), rgb(51, 40, 40));
+    backdrop-filter: blur(10px);
+}
+
+#location-time-panel.active #time {
+    animation: fromright 0.5s ease-in-out;
+}
+
+#schedule-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#location-time-panel.active #schedule-icon {
+    animation: appears 0.5s ease-in-out 0.2s;
+}
+
+#schedule-icon .material-symbols-outlined {
+    font-size: 250px;
+    margin-left: 20px;
+}
+
+#location {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.815), rgb(51, 40, 40));
+    backdrop-filter: blur(10px);
+}
+
+#location-time-panel.active #location {
+    animation: fromleft 0.5s ease-in-out;
+}
+
+#location p {
+    font-size: 25px;
+    text-align: center;
+}
+
+#location-time-panel.active #location-icon{
+    animation: appears 0.5s ease-in-out 0.2s;
+}
+
+#location-icon span {
+    font-size: 200px;
+}
+
+#location-time-panel p {
+    margin: 0 0 0 30px;
+    padding: 10px;
+}
+
+#celebrities-panel {
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    border-radius: 10px;
+}
+
+#celebrities-panel p {
+    font-size: 25px;
+    margin: 2px;
+    color: rgb(255, 237, 204);
+}
+
+#celebrities-panel h2 {
+    text-shadow: 0 0 10px black;
+}
+
+#celebrities-panel.active h2 {
+    color : white;
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 15px yellow, 0 0 20px yellow, 0 0 25px yellow, 0 0 30px yellow;
+}
+
+#celebrities-panel .celebrity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 246, 165);
+    box-shadow: black 0 0 40px;
+    transition: transform 0.25s ease-out;
+}
+
+#celebrities-panel .celebrity:hover {
+    transform: scale(1.05) translateY(-20px);
+}
+
+#celebrities-panel.active .celebrity {
+    animation: fromdown 0.5s ease-in-out;
+}
+
+#celebrities-panel .celebrity div {
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    border-radius: 10px;
+}
+
+#celebrities-panel .celebrity h3 {
+    margin: 10px 0 0 0;
+    font-size: 25px;
+}
+
+#celebrities-dis {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+}
+
+@keyframes appears {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: scale(10);
+        filter: blur(10px);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(0px);
+    }
+}
+
+@keyframes fromleft {
+    0% {
+        transform: translateX(-100%);
+        filter: blur(5px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fromright {
+    0% {
+        transform: translateX(100%);
+        filter: blur(5px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 450px;
+    }
+}
+
+@keyframes scrollload {
+    0% {
+        transform: scaleY(0) translateY(-50%) translateX(100px);
+    }
+    100% {
+        transform: scaleY(1) translateY(-50%) translateX(0);
+    }
+}
+
+@keyframes fromdown {
+    0% {
+        transform: translateY(100%);
+        filter: blur(5px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        filter: blur(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes scalein {
+    0% {
+        transform: translateX(-50%) scaleY(0) scaleX(0);
+    }
+    50% {
+        transform: translateX(-50%) scaleY(1);
+    }
+    100% {
+        transform: translateX(-50%) scaleY(1) scaleX(1);
+    }
+    
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/icon.svg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <title>BigFood</title>
+</head>
+<body id="welcome">
+    <div id="background"></div>
+    <div id="topbar" class="active">
+        <object id="logo" type="image/svg+xml" data="assets/logo.svg" width="200" onclick="window.location.reload()"></object>
+    </div>
+    <div id="scrollbar">
+    </div>
+    <div id="content">
+        <div id="welcome-panel" class="panel active">
+            <h1>Bem-vindo ao BigFood</h1>
+            <video id="video" controls preload="metadata" width="720" height="410" loop>
+                <source src="assets/video.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+
+        <div id="about-panel" class="panel">
+            <div id="about-text">
+                <div>
+                    <h1>Sobre o BigFood</h1>
+                    <div class="underline"></div>
+                </div>
+                
+                <p>
+                Bem-vindo ao BigFood,<br>o festival culinário com comidas gigantes!<br>
+                Delicie-se com hambúrgueres do tamanho de discos voadores,<br>pizzas enormes e milkshakes que são verdadeiras torres de sabor.<br>
+                Além das comidas incríveis, há concursos de comer,<br>demonstrações ao vivo e diversão para toda a família.<br>
+                Junte-se a nós nessa experiência gastronômica única!
+                </p>
+            </div>
+            <img src="assets/event.webp" alt="" width="200px">
+            
+        </div>
+
+        <div id="location-time-panel" class="panel">
+            <h1>Apartir de 10 a 25 de Julho</h1>
+            <div id="panels">
+                <div id="location">
+                    <div id="location-icon">
+                        <span class="material-symbols-outlined">
+                            location_on
+                        </span>
+                    </div>
+                    <div id="location-text">
+                        <h2>Localização</h2>
+                        <p>
+                            Rua das Carlas, 666<br>
+                            Londrina - PR
+                            31415926<br>
+                        </p>
+                    </div>
+                </div>
+                <div id="time">
+                    <div id ="schedule">
+                        <h2>Horário</h2>
+                    <p>
+                        18:00 a 22:00
+                    </p>
+                    </div>
+                    <div id="schedule-icon">
+                        <span class="material-symbols-outlined">
+                            schedule
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="celebrities-panel" class="panel">
+            <h2>Celebridades</h2>
+            <p>
+                Conheça algumas das pessoas que irão participar do evento
+            </p>
+            <div id="celebrities-dis">
+                <div class="celebrity" id="messi">
+                    <div style="background-image: url('./assets/messi.jpeg')" > </div>
+                    <h3>Messi</h3>
+                </div>
+                <div class="celebrity" id="messi">
+                    <div style="background-image: url('./assets/cristianoronaldo.jpeg')" > </div>
+                    <h3>Cristiano Ronaldo</h3>
+                </div>
+                <div class="celebrity" id="messi">
+                    <div style="background-image: url('./assets/jeniffer.png')" > </div>
+                    <h3>Jeniffer Lopez</h3>
+                </div>
+                <div class="celebrity" id="messi">
+                    <div style="background-image: url('./assets/cletin.png')" > </div>
+                    <h3>Cleitinho do grau</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
